@@ -20,7 +20,7 @@ $available_reports = [
     'logs' => [
         'title' => get_string('report_logs_title', 'report_rolcomparativa'),
         'capability' => 'report/rolcomparativa:view_report_logs'
-    ]
+    ],
     'coursestatus' => [
         'title' => get_string('report_coursestatus_title', 'report_rolcomparativa'),
         'capability' => 'report/rolcomparativa:view_report_coursestatus'
