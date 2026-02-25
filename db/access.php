@@ -1,4 +1,5 @@
 <?php
+// db/access.php
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
@@ -13,26 +14,18 @@ $capabilities = [
         ],
     ],
 
-    // 2. Permiso EXCLUSIVO para el Informe A (Ej: Comparativa de Notas)
-    'report/rolcomparativa:view_report_grades' => [
-        'captype' => 'read',
-        'contextlevel' => CONTEXT_SYSTEM,
-        'archetypes' => [
-            'editingteacher' => CAP_ALLOW, // Solo profesores y managers
-            'manager' => CAP_ALLOW,
-        ],
-    ],
-
-    // 3. Permiso EXCLUSIVO para el Informe B (Ej: Comparativa de Logs/Admin)
-    'report/rolcomparativa:view_report_logs' => [
-        'captype' => 'read',
-        'contextlevel' => CONTEXT_SYSTEM,
-        'archetypes' => [
-            'manager' => CAP_ALLOW, // Solo managers (profesores NO)
-        ],
-    ],
-
+    // 2. Permiso para el informe Free
     'report/rolcomparativa:view_report_coursestatus' => [
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+        ],
+    ],
+
+    // 3. NUEVO PERMISO para el informe Pay (El que te falta)
+    'report/rolcomparativa:view_report_paidcoursestatus' => [
         'captype' => 'read',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [
