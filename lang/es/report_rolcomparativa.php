@@ -1,16 +1,16 @@
 <?php
 // report/rolcomparativa/lang/es/report_rolcomparativa.php
 
-$string['pluginname'] = 'Hub de Informes';
+$string['pluginname'] = 'Reporte Comparativo';
 $string['rolcomparativa:view'] = 'Acceder al plugin de informes';
 
 // 1. Informe Free
-$string['report_coursestatus_title'] = 'Informe de Estado del Curso (Certificados Free)';
+$string['report_coursestatus_title'] = 'Reporte General';
 $string['rolcomparativa:view_report_coursestatus'] = 'Ver informe de estado del curso';
 
 // 2. Informe Pay (Nuevo)
-$string['report_paidcoursestatus_title'] = 'Informe de Estado del Curso (Certificados Pay)';
-$string['rolcomparativa:view_report_paidcoursestatus'] = 'Ver informe de estado del curso (Pagos)';
+$string['report_paidcoursestatus_title'] = 'Reporte de Pagos';
+$string['rolcomparativa:view_report_paidcoursestatus'] = 'Ver informe de estado del curso';
 
 // Columnas de la Tabla
 $string['col_fullname'] = 'Nombre Completo';

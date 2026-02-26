@@ -1,16 +1,16 @@
 <?php
 // report/rolcomparativa/lang/en/report_rolcomparativa.php
 
-$string['pluginname'] = 'Reports Hub';
+$string['pluginname'] = 'Comparative Report';
 $string['rolcomparativa:view'] = 'Access the reports plugin';
 
 // 1. Free Report
-$string['report_coursestatus_title'] = 'Course Status Report (Free Certificates)';
+$string['report_coursestatus_title'] = 'General Report';
 $string['rolcomparativa:view_report_coursestatus'] = 'View course status report';
 
 // 2. Pay Report (Added missing lines)
-$string['report_paidcoursestatus_title'] = 'Course Status Report (Pay Certificates)';
-$string['rolcomparativa:view_report_paidcoursestatus'] = 'View course status report (Paid)';
+$string['report_paidcoursestatus_title'] = 'Pay Report';
+$string['rolcomparativa:view_report_paidcoursestatus'] = 'View course status report';
 
 // Table Columns
 $string['col_fullname'] = 'Full Name';

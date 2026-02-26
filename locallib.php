@@ -195,15 +195,22 @@ function report_rolcomparativa_print_paidcoursestatus($searchterm = '') {
             '<span class="badge badge-success">Completado</span>' : 
             '<span class="badge badge-secondary">En Progreso</span>';
 
-        // Generar enlace al certificado (redirige a la vista del PDF para ese usuario)
+        // Generar enlace directo al PDF del certificado
         $cert_code_display = '-';
         if ($rec->cert_code) {
-            $view_url = new moodle_url('/mod/coursecertificate/view.php', [
-                'id' => $rec->cmid, 
-                'action' => 'view', 
-                'userid' => $rec->userid
+            // Cambiamos la ruta para apuntar al generador de PDF de tool_certificate
+            $pdf_url = new moodle_url('/admin/tool/certificate/view.php', [
+                'code' => $rec->cert_code // Usamos el código de verificación para identificar el certificado
             ]);
-            $cert_code_display = html_writer::link($view_url, '<code>'.$rec->cert_code.'</code>', ['target' => '_blank', 'title' => 'Visualizar Certificado']);
+            
+            $cert_code_display = html_writer::link(
+                $pdf_url, 
+                '<code>'.$rec->cert_code.'</code>', 
+                [
+                    'target' => '_blank', 
+                    'title' => 'Descargar PDF del Certificado'
+                ]
+            );
         }
 
         $table->data[] = [
